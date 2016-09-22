@@ -5,4 +5,4 @@ PORT = "5038"
 USERNAME = "zabbix"
 PASSWORD = "zabbixpasswordami"
 DEFAULT_TIMEOUT = 3
-AMI_VERSION = "1.3"
+AMI_VERSION = "2.7.0"

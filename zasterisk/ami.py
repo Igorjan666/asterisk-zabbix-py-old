@@ -32,7 +32,10 @@ class TelnetAmi:
         self.connect.sendline("Action: Login")
         self.connect.sendline("ActionID: %s" % self.get_action_id())
         self.connect.sendline("Username: %s" % self.username)
-        self.connect.sendline("Secret: %s\r" % self.password)
+        self.connect.sendline("Secret: %s" % self.password)
+        self.connect.sendline("")
+        self.connect.sendline("")
+
         self.connect.expect("Authentication accepted\r", timeout=timeout)
         self.connect.sendline("Action: Events")
         self.connect.sendline("EventMask: Off\r")
